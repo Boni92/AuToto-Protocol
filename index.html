@@ -5,19 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AuToto Protocol</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     <header>
-        <h1>Bienvenidos a AuToto Protocol </h1>
-        <p>Explora increibles dibujos de autos creados a mano.</p>
+        <div>
+            <img src="assets/images/favicon_io/android-chrome-192x192.png" alt="logo de AuToto Protocol">
+            <h1>AuToto Protocol </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre el artista</a></li>
+                <li><a href="#hero">Hero</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <section>
-            <h2>Explora</h2>
-            <p>Explora increibles dibujos de autos creados a mano.</p>
-            <img src="assets/images/autoUniversal.jpg" alt="Ejemplo de auto">
-            <a href="gallery.php">Ver Galeria</a>
+        <section id="hero">
+            <div>
+
+                <h2>Bienvenido a la Galeria de Tomás</h2>
+                <p>Explora increibles ilustraciones de autos diseñadas a mano.</p>
+                <!-- <img src="assets/images/autoUniversal.jpg" alt="Ejemplo de auto"> -->
+                <a href="#galeria" class="btn">Ver Galeria</a>
+            </div>
+            <div>
+                <!-- <img src="assets/images/portada.png" alt=""> -->
+            </div>
         </section>
+        <section id="galeria">
+            <h2>Galería de Autos</h2>
+            <div class="imagenes">
+                <img src="assets/images/auto1.jpg" alt="Dibujo de auto 1">
+                <img src="assets/images/auto2.jpg" alt="Dibujo de auto 2">
+                <img src="assets/images/auto3.jpg" alt="Dibujo de auto 3">
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre AuToto Protocol</h2>
+            <p>En AuToto Protocol nos dedicamos a la creación de ilustraciones de autos. Nuestro objetivo es brindar a nuestros clientes un producto de calidad y con un diseño único. Nuestros diseños son creados a mano por nuestros artistas y luego digitalizados para su impresión. </p>
+        </section>
+
+        <section>
+            <h2>Contacto</h2>
+            <form action="enviar.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" id="mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
     </main>
     <footer>
         <p>© 2025 Autoto Protocol - Todos los derechos reservados.</p>
