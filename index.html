@@ -5,70 +5,245 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AuToto Protocol</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Bruno+Ace+SC&family=Corinthia:wght@400;700&family=Ephesis&family=Michroma&family=Ms+Madi&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
 </head>
 <body>
     <header>
-        <div>
-            <img src="assets/images/favicon_io/android-chrome-192x192.png" alt="logo de AuToto Protocol">
-            <h1>AuToto Protocol </h1>
+        <div class="contenedormenu">
+            <div  class="menu">
+                <span class="material-symbols-outlined" id="menu-toggle">
+                    menu
+                </span>
+                <h2>Menú</h2>
+            </div>
+            <div class="titulo">
+                <h1>Prototocol </h1>
+            </div>
+            <nav id="menuDes" class="menuDes">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Acerca</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            
         </div>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre el artista</a></li>
-                <li><a href="#hero">Hero</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="video-container">
+            <video id="background-video" autoplay loop muted playsinline>
+                <source src="assets/images/videos/mclarens-coastal-chase-1.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+        </div>
+        <section id="hero">
+            <div>    
+                <div>
+                    <h2>Novedad.</h2>   
+                </div>
+                <div>   
+                    <a href="#galeria" class="btn">Ver Galeria</a>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined" id="play-button">
+                        play_pause
+                    </span>
+                </div>
+            </div>
+        </section>
+
     </header>
 
     <main>
-        <section id="hero">
-            <div>
-
-                <h2>Bienvenido a la Galeria de Tomás</h2>
-                <p>Explora increibles ilustraciones de autos diseñadas a mano.</p>
-                <!-- <img src="assets/images/autoUniversal.jpg" alt="Ejemplo de auto"> -->
-                <a href="#galeria" class="btn">Ver Galeria</a>
-            </div>
-            <div>
-                <!-- <img src="assets/images/portada.png" alt=""> -->
-            </div>
-        </section>
-        <section id="galeria">
-            <h2>Galería de Autos</h2>
+        <section id="galeria" class="animate-on-scroll">
             <div class="imagenes">
-                <img src="assets/images/auto1.jpg" alt="Dibujo de auto 1">
-                <img src="assets/images/auto2.jpg" alt="Dibujo de auto 2">
-                <img src="assets/images/auto3.jpg" alt="Dibujo de auto 3">
+                
+                <div class="containerimg animate-on-scroll box3" id="img1">
+                    <div class="textoimg">
+                        <div class="title">Lorem ipsum dolor sit amet consectetur</div>
+                        <span class="material-symbols-outlined arrowCard">
+                            arrow_forward
+                        </span>
+                    </div>
+                </div>
+                <div class="containerimg animate-on-scroll box2" id="img2">
+                    <div class="textoimg">
+                        <div class="title">Lorem ipsum dolor sit amet consectetur</div>
+                        <span class="material-symbols-outlined arrowCard">
+                            arrow_forward
+                        </span>
+                    </div>
+                </div>
+                <div class="containerimg animate-on-scroll box1" id="img3">
+                    <div class="textoimg">
+                        <div class="title">Panamera 4S E-Hybrid</div>
+                        <span class="material-symbols-outlined arrowCard">
+                            arrow_forward
+                        </span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="sobre">
-            <h2>Sobre AuToto Protocol</h2>
-            <p>En AuToto Protocol nos dedicamos a la creación de ilustraciones de autos. Nuestro objetivo es brindar a nuestros clientes un producto de calidad y con un diseño único. Nuestros diseños son creados a mano por nuestros artistas y luego digitalizados para su impresión. </p>
+        <section id="sobre" class="animate-on-scroll section20">
+            <h2>Modelos.</h2>
+            <div class="contenidoFlex">
+                <div class="modelos">
+                    <div class="modelo">
+                        <img src="assets/images/modelos/modelo1.jpeg" alt="Modelo 1">
+                        <div class="headerModelo">
+                            <h3>718</h3>
+                            <h4>Gasolina</h4>
+                        </div>
+                        <div class="contenidoModelo">
+                            <h2>Biplaza con una gran dinamica de conduccion gracias a su motor central.</h2>
+                            <p>USD 177.000</p>
+                            <div class="btnsModelo">
+                                <a href="">Diseñe su modelo</a>
+                                <a href="">Todas las versiones X</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modelo">
+                        <img src="assets/images/modelos/modelo2.jpeg" alt="Modelo 2">
+                        <div class="headerModelo">
+                            <h3>Taycan</h3>
+                            <h4>Gasolina</h4>
+                        </div>
+                        <div class="contenidoModelo">
+                            <h2>Deportivo con motor central para una experiencia única en la pista.</h2>
+                            <p>USD 180.000</p>
+                            <div class="btnsModelo">
+                                <a href="">Personalice su coche</a>
+                                <a href="">Ver todas las versiones</a>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <div class="modelo">
+                        <img src="assets/images/modelos/modelo3.jpeg" alt="Modelo 3">
+                        <div class="headerModelo">
+                            <h3>Macale</h3>
+                            <h4>Gasolina</h4>
+                        </div>
+                        <div class="contenidoModelo">
+                            <h2>Un diseño innovador con rendimiento de alto nivel gracias a su motor central.</h2>
+                            <p>USD 165.000</p>
+                            <div class="btnsModelo">
+                                <a href="">Configure su modelo</a>
+                                <a href="">Conozca las versiones disponibles</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="modelo">
+                        <img src="assets/images/modelos/modelo1.jpeg" alt="Modelo 4">
+                        <div class="headerModelo">
+                            <h3>Cayena</h3>
+                            <h4>Hybrid</h4>
+                        </div>
+                        <div class="contenidoModelo">
+                            <h2>El placer de conducir un biplaza con motor central y un diseño exclusivo.</h2>
+                            <p>USD 190.000</p>
+                            <div class="btnsModelo">
+                                <a href="">Cree su versión personalizada</a>
+                                <a href="">Explorar todas las versiones</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
-        <section>
+        <section id="contacto" class="animate-on-scroll">
             <h2>Contacto</h2>
-            <form action="enviar.php" method="post">
+            <form action="enviar-correo.php" method="post">
                 <label for="nombre">Nombre:</label>
                 <input type="text" name="nombre" id="nombre" required>
+                
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" required>
+                
                 <label for="mensaje">Mensaje:</label>
                 <textarea name="mensaje" id="mensaje" required></textarea>
+                
                 <button type="submit">Enviar</button>
             </form>
         </section>
+        
 
     </main>
     <footer>
-        <p>© 2025 Autoto Protocol - Todos los derechos reservados.</p>
+        <section class="" id="f1">
+            <div class="footer-section language">
+                <p>🌍 Región / Idioma actual:</p>
+                <select id="language-selector">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                    <option value="de">Deutsch</option>
+                </select>
+                <button class="btn">Cambiar</button>
+            </div>
+        </section>
+        <section class="footer" id="f2">
+            <div class="footer-section newsletter">
+                <p>📩 Suscríbete a nuestro newsletter para recibir novedades.</p>
+                <input type="email" placeholder="Tu correo">
+                <button class="btn">Suscribirse</button>
+            </div>
+        
+            <div class="footer-section social">
+                <p>📱 Síguenos en redes sociales:</p>
+                <div class="icons">
+                    <a href="#" aria-label="Facebook">
+                        <img src="assets/images/logos/fb.png" alt="">
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <img src="assets/images/logos/ig.png" alt="">
+                    </a>
+                    <a href="#" aria-label="Behance">
+                        <img src="assets/images/logos/be.png" alt="">
+                    </a>
+                </div>
+            </div>
+        
+            
+
+        </section>
+        <section id="f3">    
+            <div class="footer-section copyright">
+                <p>© 2025 Prototocol. Todos los derechos reservados.</p>
+            </div>
+        </section>
+        <section id="f4">    
+            <div class="footer-section titulo">
+                <p>PROTOTOCOL</p>
+            </div>
+        </section>
+
+
+        
+        
     </footer>
 </body>
+
+
+<script src="assets/js/main.js"></script>
+
 </html>
