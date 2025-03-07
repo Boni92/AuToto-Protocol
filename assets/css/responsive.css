@@ -118,6 +118,27 @@
     footer p{
         /* font-size: 2rem; */
     }
+
+    /* =========== PAGE MODELOS ============ */
+
+    .model-main .modelo{
+        width: 40vw;
+    }
+    .model-main .contenidoModelo {
+        height: auto;
+        background: linear-gradient(to bottom, #6f686800 0%, #000000 40%, #6f686800 100%);
+        border-radius: 10px 10px 0 0 ;
+    }
+    .model-main .contenidoModelo:hover {
+        background: linear-gradient(to bottom, #000000 0%, #151515 50%, #00000000 100%);
+    }
+    .model-main .contenidoModelo a{
+        width: 100%;
+    }
+
+    #menuDes a:hover {
+        padding-left: 20px;
+    }
 }
 
 /* Estilos para móviles (pantallas hasta 768px) */
@@ -168,6 +189,10 @@
             font-size: 3rem;
         }
             /* ======================= MODELOS ========================= */
+        .models-grid{
+            display: flex;
+            flex-direction: column;
+        }
         .modelos{
             padding: 0;
             margin-bottom: 30px;
@@ -295,7 +320,7 @@
             background: #007bff;
             color: white;
             cursor: pointer;
-            font-size: .55rem;
+            font-size: 1rem;
         }
         
         footer .btn:hover {
@@ -318,6 +343,15 @@
         footer .titulo p{
             font-size: 2rem;
             font-family: 'Bruno Ace SC', 'Lato', sans-serif;
+        }
+
+        /* ================= PAGE MODEL0S ================== */
+
+        .model-main .modelo{
+            max-height: 600px;
+        }
+        .model-main .contenidoModelo a{
+            font-size: 0.8rem;
         }
         
     
@@ -375,6 +409,7 @@
     .contenidoModelo{
         padding: 0 20px;
     }
+    
     .modelos{
         padding: 0;
         margin-bottom: 30px;
@@ -383,7 +418,7 @@
         gap: 20px;
     }
     .modelo{
-        width: 80vw;
+        width: 90vw;
         height: 65vh;
     }
     .modelo:nth-child(1) h3,.modelo:nth-child(4) h3,.modelo:nth-child(3) h3,.modelo:nth-child(2) h3{
@@ -519,7 +554,7 @@ footer p{
             background: #007bff;
             color: white;
             cursor: pointer;
-            font-size: .55rem;
+            font-size:1rem;
         }
         
         footer .btn:hover {
@@ -540,9 +575,40 @@ footer p{
 
         }
         footer .titulo p{
-            font-size: 2rem;
+            margin-top: 10px;
+            font-size: 1rem;
             font-family: 'Bruno Ace SC', 'Lato', sans-serif;
         }
+        input::placeholder {
+            font-size: 1.3rem;  /* Cambia el tamaño de la letra */
+            /*color: #888;       Cambia el color del texto del placeholder (opcional) */
+        }
+        /* ================= PAGE MODEL0S ================== */
         
+        .model-main .models-grid{
+            width: 80vw;
+        }
+        .model-main .modelo {
+            width: 70vw;
+        }
+        .model-main .modelo .headerModelo h3{
+            font-size: 4rem;
+        }
+        .model-main .modelo .headerModelo h4{
+            font-size: 1.5rem;
+        }
+        .model-main .contenidoModelo h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .model-main .contenidoModelo p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .model-main .contenidoModelo a {
+            height: 3rem;
+            font-size: 1rem;
+        }
+    
 
 }

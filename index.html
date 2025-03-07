@@ -9,7 +9,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
@@ -54,7 +53,7 @@
                     <h2>Novedad.</h2>   
                 </div>
                 <div>   
-                    <a href="#galeria" class="btn">Ver Galeria</a>
+                    <a href="assets/pages/modelos.html" class="btn">Ver Galeria</a>
                 </div>
                 <div>
                     <span class="material-symbols-outlined" id="play-button">
@@ -67,8 +66,8 @@
     </header>
 
     <main>
-        <section>
-            <h2>Lista de autos</h2>
+        <section id="gustos">
+            <h2>Preferidos.</h2>
             <div id="autos-container"></div>
         </section>
         <section id="galeria" class="animate-on-scroll">
@@ -102,9 +101,9 @@
         </section>
 
         <section id="sobre" class="animate-on-scroll section20">
-            <h2>Modelos.</h2>
+            <h2>Modelos propios.</h2>
             <div class="contenidoFlex">
-                <div class="modelos">
+                <!-- <div class="modelos">
                     <div class="modelo">
                         <img src="assets/images/modelos/modelo1.jpeg" alt="Modelo 1">
                         <div class="headerModelo">
@@ -170,8 +169,18 @@
 
                         </div>
                     </div>
+                </div> -->
+                <section class="models-grid" id="models-container">
+                    <!-- Modelos se cargarán dinámicamente aquí -->
+                </section>
+                <div class="btnsModelo">
+                    
+                    <a href="assets/pages/modelos.html">Ver más</a>
                 </div>
+                
+                <img src="https://drive.google.com/uc?export=view&id=1M3oyC7fYlVrgHxOjyhuDpAFc3XR5StKI" alt="">
             </div>
+
 
         </section>
 
@@ -249,7 +258,8 @@
 
 
 <script src="assets/js/main.js"></script>
-<script>
+
+<!-- <script>
     // Tu API Key y el ID de la hoja de Google Sheets
     const apiKey = 'AIzaSyAp9tYH0gUYou6b3pzrfRwIdxnGY-lUhRA'; // reemplaza con tu API Key
     const sheetID = '1gOjp3TqJJCQPlKXwupFsbaqE01c0WPh53AT47Fb0hf0'; // reemplaza con el ID de tu hoja
@@ -282,6 +292,55 @@
         .catch(error => {
             console.error('Error al obtener los datos:', error);
         });
+</script> -->
+
+<script>
+    async function fetchCarModels() {
+        const apiKey = 'AIzaSyAp9tYH0gUYou6b3pzrfRwIdxnGY-lUhRA'; // API Key de Google
+        const sheetID = '1gOjp3TqJJCQPlKXwupFsbaqE01c0WPh53AT47Fb0hf0'; // ID de la hoja de Google Sheets
+        
+        try {
+            const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/Sheet1?key=${apiKey}`);
+            const data = await response.json();
+
+            // Verifica si los datos se recibieron correctamente
+            if (data.values && data.values.length > 0) {
+                const cars = data.values.slice(1); // Ignorar la primera fila (cabeceras)
+                
+                // Toma solo los últimos 4 autos
+                const lastFourCars = cars.slice(-4).reverse();
+
+                const container = document.getElementById('models-container');
+                container.innerHTML = '';
+
+                lastFourCars.forEach(car => {
+                    const [name, fuelType, image, price, caracteristicas] = car;
+
+                    const card = document.createElement('div');
+                    card.classList.add('modelo');
+                    card.innerHTML = `
+                        <img src="${image}" alt="${name}">
+                        <div class="headerModelo">
+                            <h3>${name}</h3>
+                            <h4>${fuelType}</h4>
+                        </div>
+                        <div class="contenidoModelo">
+                            <h2>${caracteristicas}</h2>
+                            <p>USD ${price} IVA incl.</p>
+                        </div>
+                    `;
+                    
+                    container.appendChild(card);
+                });
+            } else {
+                console.error('No se encontraron datos en la hoja.');
+            }
+        } catch (error) {
+            console.error('Error al obtener los datos:', error);
+        }
+    }
+
+    fetchCarModels();
 </script>
 
 </html>

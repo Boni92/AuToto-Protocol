@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: "Lato", Arial, Helvetica, sans-serif;
     line-height: 1;
-    --sizeTituloh1:5rem;
+    --sizeTituloh1:4rem;
     --weightTituloh1:500;
     --fontTituloh1:'Alumni Sans Pinstripe', 'Lato', sans-serif;
 }
@@ -115,13 +115,16 @@ header .titulo h1{
     padding-left:0 ;
     padding-right:0 ;
 }
-#menuDes:has(ul:hover)   {
+/* #menuDes:has(ul:hover) a  {
     padding-left:0 ;
     padding-right:0 ;
+} */
+#menuDes a:hover {}
+#menuDes a:hover {}
+#menuDes a:hover {
+    padding-left: 20px;
+    border-radius: 10px;
 }
-#menuDes a:hover {}
-#menuDes a:hover {}
-
 
 
 
@@ -349,10 +352,13 @@ main{
     padding: 20px;
 
 }
+#gustos{
+    margin-top: 40px;
+}
 #sobre{
     color: #000000;
 }
-#sobre>h2{
+#sobre>h2,#gustos>h2{
     font-family:var(--fontTituloh1);
     font-size: var(--sizeTituloh1);
     font-weight: var(--weightTituloh1);
@@ -362,6 +368,8 @@ main{
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
 }
 .headerModelo{
     position: absolute;
@@ -500,7 +508,8 @@ main{
     justify-content: center;
     align-items: center;
 }
-.contenidoModelo a {
+
+.contenidoModelo a, .contenidoFlex .btnsModelo a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -515,7 +524,16 @@ main{
     font-weight: 400;
     text-align: center;
 }
-
+.contenidoFlex .btnsModelo a{
+    background: transparent;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(2, 2, 2);
+    border-radius: 5px;
+}
+.contenidoFlex .btnsModelo a:hover{
+    background-color: #333;
+    color: rgb(252, 243, 227);
+}
 .contenidoModelo a:first-of-type {
     background: white;
     color: black;
@@ -571,6 +589,9 @@ button:hover {
     background: #444;
 }
 
+
+
+
 /* FOOTER */
 footer {
     background: #222;
@@ -579,6 +600,7 @@ footer {
     padding: 1rem;
     font-size: 1rem;
     margin-top: 20px;
+    
 }
 footer p{
     font-family: 'Alumni Sans Pinstripe', 'Lato', sans-serif;
@@ -660,6 +682,17 @@ footer p{
             font-size: 2rem;
             font-family: 'Bruno Ace SC', 'Lato', sans-serif;
         }
+        input::placeholder {
+            font-size: 1rem;  /* Cambia el tamaño de la letra */
+            /*color: #888;       Cambia el color del texto del placeholder (opcional) */
+        }
+        input{
+            font-size: 1rem;
+        }
+        input:focus,input:valid {
+            color: #ffffff !important;  /* Cambia el color del texto cuando el campo tiene valor válido */
+        }
+        
         
         
         
@@ -722,11 +755,13 @@ footer p{
             justify-items: center; /* Centra las tarjetas horizontalmente */
             align-items: center; /* Centra las tarjetas verticalmente */
             padding: 20px;
+            width: fit-content;
+            justify-self: center;
         }
         .model-main .modelo{
             width: 30vw;
         }
-        .model-main .modelo img{
+        .modelo img{
             /* La imagen ocupa todo el ancho del contenedor */
             width: 100%;               
             /* Mantiene la proporción original en altura */
@@ -745,4 +780,8 @@ footer p{
         }
         .model-main .contenidoModelo a{
             font-size: .5rem ;
+        }
+        .model-main input:invalid {
+            color: #ff2424;  /* Cambia el color del texto cuando el campo tiene valor válido */
+            border: solid 2px #ff2424;
         }

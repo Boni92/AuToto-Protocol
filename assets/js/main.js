@@ -36,7 +36,6 @@ elementsToAnimate.forEach(element => {
 
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menuDes");
-console.log('menu: ', menu);
 
 // Función para abrir/cerrar el menú al hacer clic en el ícono
 // menuToggle.addEventListener("click", () => {
