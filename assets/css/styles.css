@@ -24,7 +24,7 @@ img, video {
 
 
 /*========HEADER=========*/
-header{
+header:not(.model-header){
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -680,3 +680,69 @@ footer p{
 .animated {
     animation: slideInLeft 1.5s ease-out forwards;
 }
+
+
+/* ============== PAGE MODELOS ==============  */
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, #333333c9 0%, #33333359 50%, rgba(0, 0, 0, 0) 100%);
+            color: white;
+            padding: 15px;
+            display: grid;
+            grid-template: "left center" 1fr / 1fr auto;
+        }
+        .menu-button, .search-button, .config-button {
+            background: #d00;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .title-section {
+            margin-bottom: 20px;
+        }
+        .title-section h1 {
+            font-family: var(--fontTituloh1);
+            font-size: 1.6rem;
+        }
+
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            justify-items: center; /* Centra las tarjetas horizontalmente */
+            align-items: center; /* Centra las tarjetas verticalmente */
+            padding: 20px;
+        }
+        .model-main .modelo{
+            width: 30vw;
+        }
+        .model-main .modelo img{
+            /* La imagen ocupa todo el ancho del contenedor */
+            width: 100%;               
+            /* Mantiene la proporción original en altura */
+            /* height: auto; */
+            object-fit: cover; 
+        }
+        .model-main .contenidoModelo {
+            text-align: left;
+            padding: 10px 25px;
+        }
+        .model-main .contenidoModelo h2{
+            font-weight: 400;
+        }
+        .model-main .contenidoModelo p{
+            font-weight: 300;
+        }
+        .model-main .contenidoModelo a{
+            font-size: .5rem ;
+        }

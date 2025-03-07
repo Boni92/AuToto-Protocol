@@ -67,6 +67,10 @@
     </header>
 
     <main>
+        <section>
+            <h2>Lista de autos</h2>
+            <div id="autos-container"></div>
+        </section>
         <section id="galeria" class="animate-on-scroll">
             <div class="imagenes">
                 
@@ -245,5 +249,39 @@
 
 
 <script src="assets/js/main.js"></script>
+<script>
+    // Tu API Key y el ID de la hoja de Google Sheets
+    const apiKey = 'AIzaSyAp9tYH0gUYou6b3pzrfRwIdxnGY-lUhRA'; // reemplaza con tu API Key
+    const sheetID = '1gOjp3TqJJCQPlKXwupFsbaqE01c0WPh53AT47Fb0hf0'; // reemplaza con el ID de tu hoja
+
+    // Función para obtener los datos de Google Sheets
+    fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/Sheet1?key=${apiKey}`)
+        .then(response => response.json())
+        .then(data => {
+            const rows = data.values;
+            const container = document.getElementById('autos-container');
+
+            rows.forEach((row, index) => {
+                // Ignorar la primera fila si es el encabezado
+                if (index > 0) {
+                    const [nombre, modelo, imagenUrl, propiedad1, propiedad2] = row;
+
+                    // Crear un elemento para mostrar cada auto
+                    const autoDiv = document.createElement('div');
+                    autoDiv.style.marginBottom = '20px';
+                    autoDiv.innerHTML = `
+                        <h2>${nombre} - ${modelo}</h2>
+                        <img src="${imagenUrl}" alt="${nombre}" style="width: 100%; max-width: 300px;">
+                        <p><strong>Propiedad 1:</strong> ${propiedad1}</p>
+                        <p><strong>Propiedad 2:</strong> ${propiedad2}</p>
+                    `;
+                    container.appendChild(autoDiv);
+                }
+            });
+        })
+        .catch(error => {
+            console.error('Error al obtener los datos:', error);
+        });
+</script>
 
 </html>
