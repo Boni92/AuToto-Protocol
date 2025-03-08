@@ -28,7 +28,7 @@ header:not(.model-header){
     color: #fff;
     padding: 20px;
     text-align: center;
-    height: 100vh;
+    height: 100dvh;
 }
 header .contenedormenu{
     display: grid;
