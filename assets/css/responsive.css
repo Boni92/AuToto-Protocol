@@ -170,7 +170,11 @@
         }
     
            /* ======================= GELERIA ========================= */
-        #galeria{
+           #gustos{
+            margin-top: 0px;
+        }
+        
+           #galeria{
             padding: 3rem 0;
         }
         
