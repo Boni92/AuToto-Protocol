@@ -29,6 +29,10 @@ header:not(.model-header){
     padding: 20px;
     text-align: center;
     height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 header .contenedormenu{
     display: grid;
@@ -168,13 +172,13 @@ header .titulo h1{
 #hero{
     text-align: left;
     color: #fff;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 #hero>div{
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 #hero div div {
     width: 100%;
