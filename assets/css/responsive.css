@@ -136,6 +136,9 @@
         width: 100%;
     }
 
+    #menuDes a {
+        font-size: 2.5rem;
+    }
     #menuDes a:hover {
         padding-left: 20px;
     }
@@ -442,6 +445,9 @@
     .contenidoModelo .btnsModelo{
         /* align-items: flex-start; */
     }
+    .contenidoFlex .btnsModelo a{
+        font-size: 2rem;
+    }
     .contenidoModelo a{
         width: 100%;
         height: 7rem;
@@ -494,7 +500,7 @@ footer {
 }
 footer p{
     font-family: 'Alumni Sans Pinstripe', 'Lato', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
         .footer {
@@ -547,7 +553,7 @@ footer p{
             margin-bottom: 0;
         }
         footer #f1 select, footer #f1 button{
-            font-size: 1rem;
+            font-size: 1.8rem;
             padding: 6px 10px;
         }
         
@@ -558,7 +564,7 @@ footer p{
             background: #007bff;
             color: white;
             cursor: pointer;
-            font-size:1rem;
+            font-size: 1.8rem;
         }
         
         footer .btn:hover {
